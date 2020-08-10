@@ -9,14 +9,12 @@ fun main(args: Array<String>) {
     try {
         val filename = try {
             val idx = args.indexOf("-o")
-            if (idx == -1) "demo.svg"
+            if (idx == -1) "output.svg"
             else args[idx+1]
         } catch (e: Exception) {
-            "demo.svg"
+            "output.svg"
         }
-        readLine()!!.toNFAAutomaton<QuestLanguage>().also { it.endStatement.acceptor =
-            QuestLanguage.Id1
-        }
+        CustomLanguage(readLine()!!).toNFAAutomaton()
             .toDFAAutomaton()
             .optimize()
             .toGraphviz().saveSVG(filename)
