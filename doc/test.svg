@@ -1,0 +1,57 @@
+<svg width="272px" height="121px"
+ viewBox="0.00 0.00 271.90 120.87" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1.0 1.0) rotate(0) translate(4 116.87)">
+<title>Automaton</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-116.87 267.9,-116.87 267.9,4 -4,4"/>
+<!-- s0 -->
+<g id="node1" class="node">
+<title>s0</title>
+<ellipse fill="none" stroke="black" cx="25.45" cy="-26.87" rx="21.4" ry="21.4"/>
+<ellipse fill="none" stroke="black" cx="25.45" cy="-26.87" rx="25.4" ry="25.4"/>
+<text text-anchor="middle" x="25.45" y="-23.17" font-family="Times,serif" font-size="14.00">s0</text>
+</g>
+<!-- s0&#45;&gt;s0 -->
+<g id="edge1" class="edge">
+<title>s0&#45;&gt;s0</title>
+<path fill="none" stroke="black" d="M16.19,-51C15.43,-61.41 18.51,-70.32 25.45,-70.32 32.38,-70.32 35.47,-61.41 34.71,-51"/>
+<text text-anchor="middle" x="25.45" y="-74.12" font-family="Times,serif" font-size="14.00">&#39;a&#39;</text>
+</g>
+<!-- s1 -->
+<g id="node2" class="node">
+<title>s1</title>
+<ellipse fill="none" stroke="black" cx="130.9" cy="-61.87" rx="27" ry="18"/>
+<text text-anchor="middle" x="130.9" y="-58.17" font-family="Times,serif" font-size="14.00">s1</text>
+</g>
+<!-- s0&#45;&gt;s1 -->
+<g id="edge2" class="edge">
+<title>s0&#45;&gt;s1</title>
+<path fill="none" stroke="black" d="M49.66,-34.72C66.58,-40.45 89.42,-48.17 106.4,-53.92"/>
+<text text-anchor="middle" x="77.4" y="-49.67" font-family="Times,serif" font-size="14.00">&#39;b&#39;</text>
+</g>
+<!-- s2\n(0) -->
+<g id="node3" class="node">
+<title>s2\n(0)</title>
+<ellipse fill="none" stroke="blue" cx="236.9" cy="-26.87" rx="27" ry="26.74"/>
+<text text-anchor="middle" x="236.9" y="-30.67" font-family="Times,serif" font-size="14.00">s2</text>
+<text text-anchor="middle" x="236.9" y="-15.67" font-family="Times,serif" font-size="14.00">(0)</text>
+</g>
+<!-- s0&#45;&gt;s2\n(0) -->
+<g id="edge3" class="edge">
+<title>s0&#45;&gt;s2\n(0)</title>
+<path fill="none" stroke="black" d="M50.83,-24.1C66.06,-22.51 86.09,-20.67 103.9,-19.87 127.87,-18.79 133.92,-18.8 157.9,-19.87 175.28,-20.65 194.78,-22.4 209.94,-23.95"/>
+<text text-anchor="middle" x="130.9" y="-23.67" font-family="Times,serif" font-size="14.00">&#39;c&#39;</text>
+</g>
+<!-- s1&#45;&gt;s1 -->
+<g id="edge4" class="edge">
+<title>s1&#45;&gt;s1</title>
+<path fill="none" stroke="black" d="M121.68,-78.91C119.8,-88.73 122.87,-97.87 130.9,-97.87 138.92,-97.87 141.99,-88.73 140.11,-78.91"/>
+<text text-anchor="middle" x="130.9" y="-101.67" font-family="Times,serif" font-size="14.00">&#39;b&#39;</text>
+</g>
+<!-- s1&#45;&gt;s2\n(0) -->
+<g id="edge5" class="edge">
+<title>s1&#45;&gt;s2\n(0)</title>
+<path fill="none" stroke="black" d="M155.24,-54.02C171.88,-48.41 194.23,-40.89 211.18,-35.19"/>
+<text text-anchor="middle" x="183.9" y="-49.67" font-family="Times,serif" font-size="14.00">&#39;c&#39;</text>
+</g>
+</g>
+</svg>

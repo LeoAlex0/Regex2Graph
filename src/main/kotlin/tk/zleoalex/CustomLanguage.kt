@@ -7,6 +7,6 @@ import tk.zleoalex.graph.IWordGraphable
 data class CustomLanguage(
     override val regex: String,
     override val prio: Int = 0,
-    override val color: Color = Color.BLUE,
+    override val color: Color = Color.GREEN,
     override val id: Int = 0
 ) : IWordRegex, IWordGraphable
