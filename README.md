@@ -2,7 +2,7 @@
 
 A Converter from Regex to DFA Graph(using [graphviz-kotlin](https://mvnrepository.com/artifact/guru.nidi/graphviz-kotlin))
 
-Initially be designed for helping me to complete my assignments of *Principles of Compilation *
+Initially be designed for helping me to complete my assignments of *Principles of Compilation*
 
 ![test](doc/test.svg)
 
