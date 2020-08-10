@@ -10,14 +10,16 @@ fun main(args: Array<String>) {
         val filename = try {
             val idx = args.indexOf("-o")
             if (idx == -1) "output.svg"
-            else args[idx+1]
+            else args[idx + 1]
         } catch (e: Exception) {
             "output.svg"
         }
+
         CustomLanguage(readLine()!!).toNFAAutomaton()
             .toDFAAutomaton()
             .optimize()
-            .toGraphviz().saveSVG(filename)
+            .toGraphviz()
+            .saveSVG(filename)
     } catch (e: Exception) {
         e.printStackTrace()
     }

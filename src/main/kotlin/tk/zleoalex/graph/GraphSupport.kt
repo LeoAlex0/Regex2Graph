@@ -8,27 +8,26 @@ import guru.nidi.graphviz.engine.Graphviz
 import tk.zleoalex.automaton.Automaton
 import java.io.File
 
-fun <WordType: IWordGraphable> Automaton<WordType>.toGraphviz(): Graphviz {
-    val s = mutableMapOf(Pair(this.startStatement,0))
-    val g = graph(name = "Automaton",directed = true) {
-        edge[Arrow.VEE]
+fun <WordType : IWordGraphable> Automaton<WordType>.toGraphviz(): Graphviz {
+    val s = mutableMapOf(Pair(this.startStatement, 0))
+    val g = graph(name = "Automaton", directed = true) {
         graph[Rank.dir(Rank.RankDir.LEFT_TO_RIGHT)]
         "s0"[Shape.DOUBLE_CIRCLE]
     }
 
     this.forEach { v ->
-        s.putIfAbsent(v,s.size)
-        val vAppend = if(v.acceptor != null) "\n(${v.acceptor!!.id})" else ""
+        s.putIfAbsent(v, s.size)
+        val vAppend = if (v.acceptor != null) "\n(${v.acceptor!!.id})" else ""
         v.nextNode.forEach { (c, set) ->
             set.forEach { u ->
-                val uAppend = if(u.acceptor != null) "\n(${u.acceptor!!.id})" else ""
+                val uAppend = if (u.acceptor != null) "\n(${u.acceptor!!.id})" else ""
                 val uColor = u.acceptor?.color ?: Color.BLACK
-                val label = if(c == null) Label.html("&epsilon;") else Label.of("'$c'")
+                val label = if (c == null) Label.html("&epsilon;") else Label.of("'$c'")
 
-                s.putIfAbsent(u,s.size)
+                s.putIfAbsent(u, s.size)
 
-                g.add(graph {
-                    ("s${s[v]}$vAppend" - "s${s[u]}$uAppend"[uColor])[label]
+                g.add(graph(directed = true) {
+                    ("s${s[v]}$vAppend" - "s${s[u]}$uAppend"[uColor])[label, Arrow.VEE]
                 })
             }
         }
@@ -37,4 +36,4 @@ fun <WordType: IWordGraphable> Automaton<WordType>.toGraphviz(): Graphviz {
     return g.toGraphviz()
 }
 
-fun Graphviz.saveSVG(filename:String) = this.render(Format.SVG).toFile(File(filename))
+fun Graphviz.saveSVG(filename: String) = this.render(Format.SVG).toFile(File(filename))
